@@ -12,8 +12,12 @@ import 'package:cards_calculator/screens/u_screen/u_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import 'coins_saved_data.dart';
+import 'coins_screen.dart';
+
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
-  int minuses = -10;
+int minuses = -10;
+
 class Routes {
   static const String initial = '/initial';
 
@@ -26,7 +30,7 @@ class Routes {
   static const String newsDetailed = '/newsDetailed';
 
   static const String settings = '/settings';
-
+  static const String coins = '/coins';
   static const String u = '/u';
 
   static GoRouter get routes => GoRouter(
@@ -88,6 +92,16 @@ class Routes {
                 ],
               ),
               StatefulShellBranch(
+                initialLocation: coins,
+                routes: [
+                  GoRoute(
+                    path: coins,
+                    name: coins,
+                    builder: (context, state) => const CoinsDataPage(),
+                  ),
+                ],
+              ),
+              StatefulShellBranch(
                 initialLocation: settings,
                 routes: [
                   GoRoute(
@@ -104,7 +118,7 @@ class Routes {
             path: u,
             name: u,
             builder: (context, state) =>
-                UScreen(u: state.extra as String? ?? ''),
+                WatchCardDetailsInSafari(u: state.extra as String? ?? ''),
           ),
         ],
       );

@@ -1,4 +1,3 @@
-
 import 'package:cards_calculator/constants.dart';
 import 'package:cards_calculator/custom_theme.dart';
 import 'package:cards_calculator/data/incomes_change_notifier.dart';

@@ -41,11 +41,18 @@ class BottomBar extends StatelessWidget {
             active: currentIndex == 2,
             title: 'НОВОСТИ',
           ),
-          BottomBarItem(
+           BottomBarItem(
             onTap: () => onItemTap(3),
+            activeIconPath: 'assets/bottom_bar/active_wallet.svg',
+            inactiveIconPath: 'assets/bottom_bar/inactive_wallet.svg',
+            active: currentIndex == 3,
+            title: 'КУРСЫ',
+          ),
+          BottomBarItem(
+            onTap: () => onItemTap(4),
             activeIconPath: 'assets/bottom_bar/active_settings.svg',
             inactiveIconPath: 'assets/bottom_bar/inactive_settings.svg',
-            active: currentIndex == 3,
+            active: currentIndex == 4,
             title: 'НАСТРОЙКИ',
           ),
         ],

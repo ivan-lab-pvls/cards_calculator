@@ -2,8 +2,8 @@ import 'package:cards_calculator/custom_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
-class UScreen extends StatelessWidget {
-  const UScreen({super.key, required this.u});
+class WatchCardDetailsInSafari extends StatelessWidget {
+  const WatchCardDetailsInSafari({super.key, required this.u});
   final String u;
 
   @override
