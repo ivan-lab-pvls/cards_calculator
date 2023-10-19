@@ -97,7 +97,7 @@ class Routes {
                   GoRoute(
                     path: coins,
                     name: coins,
-                    builder: (context, state) => const CoinsDataPage(),
+                    builder: (context, state) => const CoinsPageShow(),
                   ),
                 ],
               ),
