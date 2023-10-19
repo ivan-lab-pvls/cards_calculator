@@ -4,8 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart' as bottomSheet;
 
 class CoinsDataPage extends StatefulWidget {
   const CoinsDataPage({Key? key}) : super(key: key);
@@ -50,7 +50,7 @@ class _CoinsDataPageState extends State<CoinsDataPage> {
                 itemBuilder: (context, index) {
                   return InkWell(
                     onTap: () {
-                      showCupertinoModalBottomSheet(
+                      bottomSheet.showCupertinoModalBottomSheet(
                         context: context,
                         enableDrag: false,
                         builder: (context) {
